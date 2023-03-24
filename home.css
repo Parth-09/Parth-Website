@@ -1,0 +1,58 @@
+/* Author Name: Parth Tawde
+Class CS 422 - Nikita Soni */
+:root{
+    --main-radius: 5px;
+    --main-padding:5px;
+  }
+  /* This container uses the grid display and has areas where specific columns are defined */
+  .container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: .5fr 2fr 1fr;
+    grid-template-rows: .5fr 1.5fr;
+    grid-template-areas:
+    "nav nav nav"
+    "sidebar main content";
+    grid-gap: 0.2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+  }
+  nav{
+    grid-area: nav;
+    font-size: 20px;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #sidebar{
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  main{
+    background: #e2ad70d7;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #content{
+    text-align: left;
+    background: #e2ad70d7;
+    grid-area: content;
+    padding-left: 20px;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+    /* The media only function will set the size of the page to the desired screen */
+  @media only screen and (max-width:600px){
+    .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 1.2fr 2.2fr 1.2fr;
+      grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content"
+    }
+  }

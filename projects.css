@@ -1,0 +1,87 @@
+/* Author Name: Parth Tawde
+Class CS 422 - Nikita Soni */
+:root{
+    --main-radius: 5px;
+    --main-padding:5px;
+  }
+  
+  /* The container displays a grid with different sections being assigned to different columns */
+  .container1{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .4fr 1fr 1fr;
+    grid-template-areas:
+    "nav nav"
+    "content1 content2"
+    "content3 content4";
+    grid-gap: 0.2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* This container is to adentify the text and the image */
+  .innercontainer{
+    display: flex;
+
+  }
+  nav{
+    grid-area: nav;
+    font-size: 20px;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #content1{
+    min-height: 98%;
+    background: #e2ad70d7;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #content2{
+    min-height: 99%;
+    background: #e2ad70d7;
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #content3{
+    min-height: 98%;
+    background: #e2ad70d7;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #content4{
+    min-height: 99%;
+    background: #e2ad70d7;
+    grid-area: content4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #contentimg{
+    grid-area: contentimg;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #context{
+    padding-left: 20px;
+    grid-area: context;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  /* This allows the screen to fit to the size of the current screen */
+  @media only screen and (max-width:768px){
+    .container1{
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "nav"
+      "content1"
+      "content2"
+      "content3"
+      "content4"
+    }
+  }
