@@ -73,7 +73,7 @@ Class CS 422 - Nikita Soni */
     padding-top: var(--main-padding);
   }
   /* This allows the screen to fit to the size of the current screen */
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width:400px){
     .container1{
       grid-template-columns: 1fr;
       grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
@@ -83,5 +83,16 @@ Class CS 422 - Nikita Soni */
       "content2"
       "content3"
       "content4"
+    }
+  }
+  @media only screen and (max-width:800px){
+    .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 1.2fr 2.2fr 1.2fr;
+      grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content"
     }
   }
